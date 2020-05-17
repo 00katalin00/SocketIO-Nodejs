@@ -1,4 +1,4 @@
-let socket = io.connect("http://localhost:8080", {
+let socket = io.connect("http://localhost:80", {
   forceNew: true,
 });
 
@@ -11,9 +11,9 @@ function render(data) {
     .map((d, i) => {
       if (data.length <= 9 || data.length - 9 <= i) {
         if (socket.id === d.username) {
-          return `<div>#${i} | <b>YO</b>: <em>${d.text}</em></div>`;
+          return `<div><b>YO</b>: <em>${d.text}</em></div>`;
         } else {
-          return `<div>#${i} | <b>${d.username}</b>: <em>${d.text}</em></div>`;
+          return `<div><b>${d.username}</b>: <em>${d.text}</em></div>`;
         }
       }
     })
@@ -28,10 +28,8 @@ document.getElementById("form").addEventListener("submit", (e) => {
   let payload = {
     text: e.target.text.value,
   };
+
   console.log(payload);
 
   socket.emit("newMessage", payload);
-
-  // console.log(e.target.username.value);
-  //console.log(e.target.texto.value);
 });
