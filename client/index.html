@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sockets IO APP</title>
+    <style>
+      p {
+        font-size: 24px;
+      }
+      div {
+        font-size: 20px;
+        padding: 10px;
+      }
+      form {
+        margin-top: 20px;
+        padding-top: 20px;
+        border-top: 1px dashed black;
+        position: absolute;
+        width: 98%;
+        bottom: 10px;
+      }
+      #text {
+        padding: 10px;
+        width: 80%;
+      }
+      #submit {
+        padding: 10px;
+        cursor: pointer;
+        width: 12%;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Pruebas con Socket.IO</h1>
+    <p>Mensajes de chat:</p>
+    <div id="mensajes"></div>
+
+    <form id="form">
+      <input type="text" name="text" id="text" placeholder="Mensaje..." />
+      <input type="submit" value="Enviar !" id="submit" />
+    </form>
+  </body>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="main.js"></script>
+</html>

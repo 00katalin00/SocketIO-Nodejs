@@ -1,0 +1,27 @@
+{
+  "name": "sockets.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/00katalin00/SocketIO-Nodejs.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/00katalin00/SocketIO-Nodejs/issues"
+  },
+  "homepage": "https://github.com/00katalin00/SocketIO-Nodejs#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "socket.io": "^2.3.0"
+  },
+  "dev-dependencies": {
+    "nodemon": "^2.0.4"
+  }
+}
